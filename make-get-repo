@@ -1,0 +1,2 @@
+#!/bin/bash
+git init && git add -A && git commit -m "intitial commit" && gh repo create "$1" --public --source=. --remote=origin --push --description "$2"

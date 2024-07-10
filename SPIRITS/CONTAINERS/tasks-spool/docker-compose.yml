@@ -1,0 +1,11 @@
+version: '3.8'  # Use the Docker Compose file format version
+
+services:
+  tsp-container3:
+    image: mini-queue-tsp  # Use the Docker image you've built (replace with actual image name)
+    volumes:
+      - .:/app  # Mount the current directory into /app directory in the container
+    stdin_open: true  # Keep STDIN open even if not attached (for interactive mode)
+    tty: true  # Allocate a pseudo-TTY for the container
+    restart: unless-stopped  # Restart the container unless explicitly stopped
+    container_name: tsp-container3  # Specify the container name
